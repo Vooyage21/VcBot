@@ -1,9 +1,9 @@
-# Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# dante - UserBot
+# Copyright (C) 2021-2022 Teamdante
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Teamdante/dante/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Teamdante/dante/blob/main/LICENSE/>.
 
 # ----------------------------------------------------------#
 #                                                           #
@@ -29,22 +29,22 @@ from telethon.errors.rpcerrorlist import (
     ParticipantJoinMissingError,
     ChatSendMediaForbiddenError,
 )
-from pyUltroid import HNDLR, LOGS, asst, udB, vcClient
-from pyUltroid._misc._decorators import compile_pattern
-from pyUltroid.fns.helper import (
+from dante import HNDLR, LOGS, asst, udB, vcClient
+from dante._misc._decorators import compile_pattern
+from dante.fns.helper import (
     bash,
     downloader,
     inline_mention,
     mediainfo,
     time_formatter,
 )
-from pyUltroid.fns.admins import admin_check
-from pyUltroid.fns.tools import is_url_ok
-from pyUltroid.fns.ytdl import get_videos_link
-from pyUltroid._misc import owner_and_sudos, sudoers
-from pyUltroid._misc._assistant import in_pattern
-from pyUltroid._misc._wrappers import eod, eor
-from pyUltroid.version import __version__ as UltVer
+from dante.fns.admins import admin_check
+from dante.fns.tools import is_url_ok
+from dante.fns.ytdl import get_videos_link
+from dante._misc import owner_and_sudos, sudoers
+from dante._misc._assistant import in_pattern
+from dante._misc._wrappers import eod, eor
+from dante.version import __version__ as UltVer
 from telethon import events
 from telethon.tl import functions, types
 from telethon.utils import get_display_name
@@ -92,7 +92,7 @@ class Player:
         try:
             await vcClient(
                 functions.phone.CreateGroupCallRequest(
-                    self._chat, title="🎧 Ultroid Music 🎶"
+                    self._chat, title="🎧 dante Music 🎶"
                 )
             )
         except Exception as e:
